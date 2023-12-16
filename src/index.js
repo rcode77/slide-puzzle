@@ -17,7 +17,7 @@ import { render } from "react-dom";
 
 const loggerMiddleware = createLogger();
 
-let defaultSize;
+let defaultSize = 3;
 if (window.location.pathname === "/sulit") {
   defaultSize = 4;
 } else if (window.location.pathname === "/mudah") {
@@ -50,6 +50,6 @@ const store = createStore(
   applyMiddleware(thunkMiddleware, loggerMiddleware)
 );
 
-store.dispatch(startNewPuzzle(defaultSize || 3));
+store.dispatch(startNewPuzzle(defaultSize));
 
 render(<Root store={store} />, document.getElementById("root"));

@@ -95,7 +95,7 @@ const GameView = ({ viewArea, puzzleArea, isSolving }) => {
   };
 
   const buttonstyle = {
-    width: `${btnwidth}px`,
+    width: `45%`,
     height: `50px`,
     backgroundColor: "#4cc9f0",
     color: "white",
