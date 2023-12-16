@@ -28,7 +28,7 @@ class UI extends Component {
   uiSelectType(e) {
     const { selectType, images } = this.props;
     let imgSrc = null;
-    if (selectType === "Image") {
+    if (selectType === "Gambar") {
       let index = Math.floor(
         Math.random() * Math.floor(images["allKeys"].length - 1)
       );
