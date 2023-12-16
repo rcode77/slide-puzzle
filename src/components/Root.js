@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import App from "../containers/App";
 import Mudah from "../containers/Mudah";
-import Mudah from "../containers/Sulit";
+import Sulit from "../containers/Sulit";
 
 const Root = ({ store }) => (
   <Provider store={store}>
