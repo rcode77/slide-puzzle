@@ -1,200 +1,160 @@
-
 .Tile {
   position: absolute;
   text-align: center;
-  font-size:8em;
-  left:0;
-  top:0;
+  font-size: 8em;
+  left: 0;
+  top: 0;
 
-  background: #FFFFFF;
-    -webkit-box-shadow: inset 0 0 5px 5px whitesmoke;
-    -moz-box-shadow: inset 0 0 5px 5px whitesmoke;
-    box-shadow: inset 0 0 5px 5px whitesmoke;
-
-
+  background: #ffffff;
+  -webkit-box-shadow: inset 0 0 5px 5px whitesmoke;
+  -moz-box-shadow: inset 0 0 5px 5px whitesmoke;
+  box-shadow: inset 0 0 5px 5px whitesmoke;
 }
 
 .TileTxt {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    display:inline;
-    text-align: center;
-    vertical-align: sub;
-    color: #2f3441;
-
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline;
+  text-align: center;
+  vertical-align: sub;
+  color: #2f3441;
 }
 
-
 .Grid {
-
   transform-origin: 0 0;
-  display:inline-block;
-  background-color: whitesmoke;
-    border: 2px solid whitesmoke;
-    border-radius: 5px;
-    margin:0 auto;
-    position:relative;
-
-
+  display: inline-block;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .bg-image {
-  visibility:hidden;
+  visibility: hidden;
 }
-
 
 .grid-container {
-
-  background-color: white;
-  position:relative;
-    display:block;
-    padding:15px;
-    float:left;
-
+  background-color: #ffffff;
+  position: relative;
+  display: block;
+  padding: 15px;
+  float: left;
 }
 
-
-.game-container{
-
-    background-color: #a8ada6;
-    max-width:1024px;
-    margin: auto;
-    overflow:hidden;
+.game-container {
+  background-color: #ffffff;
+  max-width: 1024px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .game-area {
-
-    background-color: whitesmoke;
-
-
+  background-color: #ffffff;
 }
 
 .nav {
-
-    background-color: #2f3441;
-    position:relative;
-    float:left;
-    display:inline-block;
-
-
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .nav button {
-
-    background:transparent;
-    font-size:18px;
-    text-align:center;
-    margin:auto;
-    vertical-align: top;
-    color: #19a4ad;
-    outline:whitesmoke;
-
-
-
+  background: transparent;
+  font-size: 18px;
+  text-align: center;
+  margin: auto;
+  vertical-align: top;
+  color: #19a4ad;
+  outline: whitesmoke;
 }
 
 .sidebar {
-    text-align:left;
-    position:relative;
-    pointer-events: none;
-    display:block;
-    height:100%;
-
-
-
+  text-align: left;
+  position: relative;
+  pointer-events: none;
+  display: block;
+  height: 100%;
 }
 
 .solveInfo {
-
-
-    padding:15px 20px;
-    text-align:center;
-    float:left;
-    display:block;
-
-
+  padding: 15px 20px;
+  text-align: center;
+  float: left;
+  display: block;
 }
 
 .gears {
-    color:white;
+  color: white;
 
-    float:left;
-    margin:auto;
+  float: left;
+  margin: auto;
 }
 
 .gears img {
-    margin:-5px;
-
+  margin: -5px;
 }
 
 .gearsmoving img {
-    margin:-5px;
-    animation: rotate 2s linear infinite;
-
+  margin: -5px;
+  animation: rotate 2s linear infinite;
 }
 
-
 @keyframes rotate {
-    100% {
-        transform:rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .solveInfo p {
-
-    margin-top:2px;
+  margin-top: 2px;
 }
 
 figure {
-    pointer-events: all;
-    position:absolute;
-    bottom:0;
-    right:0;
-    padding:0;
-
+  pointer-events: all;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0;
 }
 
 figcaption {
-    font-size:12px;
+  font-size: 12px;
 }
 
 figure a {
-    outline:none;
-    text-decoration:none;
-    padding:0;
-    margin:0;
-    color:black;
+  outline: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: black;
 }
 
 .wholepage {
-
-    text-align: center;
+  text-align: center;
 }
 .placeHolder {
-
-    opacity:0;
+  opacity: 0;
 }
 
 .pagetitle {
-
 }
 
 .writeup {
-    padding-top:30px;
-    max-width:720px;
-    margin:auto;
-    text-align: left;
+  padding-top: 30px;
+  max-width: 720px;
+  margin: auto;
+  text-align: left;
 }
 
 .pagedescription {
-
-    margin:auto;
-    font-size:15px;
-    padding-bottom:30px;
-
+  margin: auto;
+  font-size: 15px;
+  padding-bottom: 30px;
 }
-

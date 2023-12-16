@@ -5,7 +5,7 @@ import GameView from "../components/GameView";
 
 import { resizeGame, addImages, setDefaultImage } from "../actionCreators";
 
-class Test extends Component {
+class Sulit extends Component {
   constructor(props) {
     super(props);
 
@@ -96,4 +96,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Test);
+export default connect(mapStateToProps)(Sulit);
