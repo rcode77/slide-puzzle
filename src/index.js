@@ -7,6 +7,7 @@ import {
   requestSolution,
   getSolution,
   changeGridSize,
+  changeDisplayType,
 } from "./actionCreators";
 import appReducer from "./reducers";
 import Root from "./components/Root";
@@ -34,7 +35,7 @@ const initialState = {
   isSolving: false,
   showNext: false,
   isShowingSolution: false,
-  imgSrc: null,
+  imgSrc: "/static/media/alogo.68bd2aa4.jpg",
   images: [],
   defaultImg: null,
   dragIndex: null,
