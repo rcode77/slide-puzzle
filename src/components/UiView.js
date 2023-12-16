@@ -11,9 +11,9 @@ const UiView = (props) => (
     <button onClick={props.onNewClick} style={props.buttonStyle}>
       Mulai Baru
     </button>
-    {/* <button onClick={props.onSizeClick} style={props.buttonStyle}>
-      {props.selectSize} puzzle
-    </button> */}
+    <button onClick={props.onSizeClick} style={props.buttonStyle}>
+      {props.selectSize} Puzzle
+    </button>
   </div>
 );
 

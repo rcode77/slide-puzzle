@@ -1,55 +1,55 @@
-import './index.css';
-import thunkMiddleware from 'redux-thunk'
-import { createLogger } from 'redux-logger'
-import { createStore, applyMiddleware } from 'redux'
-import { startNewPuzzle, requestSolution, getSolution, changeGridSize } from './actionCreators'
-import appReducer from './reducers'
-import Root from './components/Root'
-import React from 'react'
-import ReactDOM from 'react-dom';
+import "./index.css";
+import thunkMiddleware from "redux-thunk";
+import { createLogger } from "redux-logger";
+import { createStore, applyMiddleware } from "redux";
+import {
+  startNewPuzzle,
+  requestSolution,
+  getSolution,
+  changeGridSize,
+} from "./actionCreators";
+import appReducer from "./reducers";
+import Root from "./components/Root";
+import React from "react";
+import ReactDOM from "react-dom";
 
-import { render } from 'react-dom'
+import { render } from "react-dom";
 
-const loggerMiddleware = createLogger()
+const loggerMiddleware = createLogger();
 
-const initialState = {
-
-    viewArea: { w:window.innerWidth, h:window.innerHeight },
-    gridSize: 4,
-    tiles: null,
-    puzzleArea: { w:768, h:768 },
-    displayType: 'Numbers',
-    solution: null,
-    isSolving: false,
-    showNext: false,
-    isShowingSolution: false,
-    imgSrc: null,
-    images: [],
-    defaultImg: null,
-    dragIndex: null,
-    dragStart: null,
-    dragOffset: null,
-    dragArea: null,
-    dropIndex: null
-
+let defaultSize;
+if (window.location.pathname === "/sulit") {
+  defaultSize = 4;
+} else if (window.location.pathname === "/mudah") {
+  defaultSize = 3;
 }
 
+const initialState = {
+  viewArea: { w: window.innerWidth, h: window.innerHeight },
+  gridSize: defaultSize,
+  tiles: null,
+  puzzleArea: { w: 768, h: 768 },
+  displayType: "Angka",
+  solution: null,
+  isSolving: false,
+  showNext: false,
+  isShowingSolution: false,
+  imgSrc: null,
+  images: [],
+  defaultImg: null,
+  dragIndex: null,
+  dragStart: null,
+  dragOffset: null,
+  dragArea: null,
+  dropIndex: null,
+};
+
 const store = createStore(
-    appReducer,
-    initialState,
-    applyMiddleware(
-        thunkMiddleware,
-        loggerMiddleware
-    )
-)
-
-
-store.dispatch(startNewPuzzle(4));
-
-render(
-    <Root store={store} />,
-    document.getElementById('root')
-
+  appReducer,
+  initialState,
+  applyMiddleware(thunkMiddleware, loggerMiddleware)
 );
 
+store.dispatch(startNewPuzzle(defaultSize || 3));
 
+render(<Root store={store} />, document.getElementById("root"));
