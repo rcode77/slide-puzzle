@@ -29,7 +29,7 @@ const initialState = {
   gridSize: defaultSize,
   tiles: null,
   puzzleArea: { w: 768, h: 768 },
-  displayType: "Angka",
+  displayType: "Gambar",
   solution: null,
   isSolving: false,
   showNext: false,
