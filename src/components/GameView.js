@@ -91,7 +91,7 @@ const GameView = ({ viewArea, puzzleArea, isSolving }) => {
 
   const uistyle = {
     width: `${uiwidth}px`,
-    height: `${uiheight}px`,
+    // height: `${uiheight}px`,
   };
 
   const buttonstyle = {

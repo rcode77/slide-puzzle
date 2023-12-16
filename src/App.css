@@ -58,6 +58,7 @@
 }
 
 .nav {
+  height: 70px;
   background-color: #ffffff;
   position: relative;
   display: flex;
