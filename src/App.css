@@ -1,38 +1,200 @@
-.App {
+
+.Tile {
+  position: absolute;
   text-align: center;
+  font-size:8em;
+  left:0;
+  top:0;
+
+  background: #FFFFFF;
+    -webkit-box-shadow: inset 0 0 5px 5px whitesmoke;
+    -moz-box-shadow: inset 0 0 5px 5px whitesmoke;
+    box-shadow: inset 0 0 5px 5px whitesmoke;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.TileTxt {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display:inline;
+    text-align: center;
+    vertical-align: sub;
+    color: #2f3441;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.Grid {
+
+  transform-origin: 0 0;
+  display:inline-block;
+  background-color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    margin:0 auto;
+    position:relative;
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-image {
+  visibility:hidden;
 }
 
-.App-link {
-  color: #61dafb;
+
+.grid-container {
+
+  background-color: white;
+  position:relative;
+    display:block;
+    padding:15px;
+    float:left;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.game-container{
+
+    background-color: #a8ada6;
+    max-width:1024px;
+    margin: auto;
+    overflow:hidden;
 }
+
+.game-area {
+
+    background-color: whitesmoke;
+
+
+}
+
+.nav {
+
+    background-color: #2f3441;
+    position:relative;
+    float:left;
+    display:inline-block;
+
+
+}
+
+.nav button {
+
+    background:transparent;
+    font-size:18px;
+    text-align:center;
+    margin:auto;
+    vertical-align: top;
+    color: #19a4ad;
+    outline:whitesmoke;
+
+
+
+}
+
+.sidebar {
+    text-align:left;
+    position:relative;
+    pointer-events: none;
+    display:block;
+    height:100%;
+
+
+
+}
+
+.solveInfo {
+
+
+    padding:15px 20px;
+    text-align:center;
+    float:left;
+    display:block;
+
+
+}
+
+.gears {
+    color:white;
+
+    float:left;
+    margin:auto;
+}
+
+.gears img {
+    margin:-5px;
+
+}
+
+.gearsmoving img {
+    margin:-5px;
+    animation: rotate 2s linear infinite;
+
+}
+
+
+@keyframes rotate {
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+.solveInfo p {
+
+    margin-top:2px;
+}
+
+figure {
+    pointer-events: all;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0;
+
+}
+
+figcaption {
+    font-size:12px;
+}
+
+figure a {
+    outline:none;
+    text-decoration:none;
+    padding:0;
+    margin:0;
+    color:black;
+}
+
+.wholepage {
+
+    text-align: center;
+}
+.placeHolder {
+
+    opacity:0;
+}
+
+.pagetitle {
+
+}
+
+.writeup {
+    padding-top:30px;
+    max-width:720px;
+    margin:auto;
+    text-align: left;
+}
+
+.pagedescription {
+
+    margin:auto;
+    font-size:15px;
+    padding-bottom:30px;
+
+}
+

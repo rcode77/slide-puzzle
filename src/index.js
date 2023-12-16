@@ -1,17 +1,55 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import thunkMiddleware from 'redux-thunk'
+import { createLogger } from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux'
+import { startNewPuzzle, requestSolution, getSolution, changeGridSize } from './actionCreators'
+import appReducer from './reducers'
+import Root from './components/Root'
+import React from 'react'
+import ReactDOM from 'react-dom';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+import { render } from 'react-dom'
+
+const loggerMiddleware = createLogger()
+
+const initialState = {
+
+    viewArea: { w:window.innerWidth, h:window.innerHeight },
+    gridSize: 4,
+    tiles: null,
+    puzzleArea: { w:768, h:768 },
+    displayType: 'Numbers',
+    solution: null,
+    isSolving: false,
+    showNext: false,
+    isShowingSolution: false,
+    imgSrc: null,
+    images: [],
+    defaultImg: null,
+    dragIndex: null,
+    dragStart: null,
+    dragOffset: null,
+    dragArea: null,
+    dropIndex: null
+
+}
+
+const store = createStore(
+    appReducer,
+    initialState,
+    applyMiddleware(
+        thunkMiddleware,
+        loggerMiddleware
+    )
+)
+
+
+store.dispatch(startNewPuzzle(4));
+
+render(
+    <Root store={store} />,
+    document.getElementById('root')
+
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
